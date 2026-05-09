@@ -1,73 +1,53 @@
-# React + TypeScript + Vite
+1. ⏱️ Coding Timer
+Start the timer when you begin coding. Stop when you're done. It tracks your time automatically.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+2. 💾 Session Tracking
+Every coding session is saved with duration and date/time. You can review all your past sessions anytime.
 
-Currently, two official plugins are available:
+3. 🎯 Daily Goal
+Set a daily coding target (e.g., 2 hours). A progress bar shows how close you are to completing your goal.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+4. 📋 Session History
+View a complete list of all your past coding sessions with timestamps.
 
-## React Compiler
+5. 🔒 Local Storage
+All your data is saved in your browser. Nothing is lost even if you refresh or close the page.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🖥️ What Does the User Get?
+text
+User → Open DevMetrics → Click Start → Start Coding
+     → Coding Done → Click Stop → Session Saved
+     → Set 2 Hour Goal → Progress Bar Shows
+     → Goal Completed → Celebration Message
+     
+🎨 Visual Overview:
+┌──────────────────────────────────────────┐
+│         ⚡ DEVmetrics                    |
+│    Code. Track. Improve.                 │
+├──────────────────────────────────────────┤
+│  ┌─────────┐ ┌─────────┐ ┌─────────┐    │
+│  │ ⏱️      │ │ 📊      │ │ 🎯      │    │
+│  │00:00:00 │ │00:00:00 │ │Sessions │    │
+│  │Current  │ │Today's  │ │Count    │    │
+│  └─────────┘ └─────────┘ └─────────┘    │
+├──────────────────────────────────────────┤
+│  [▶ Start]  [⏹ Stop]  [🔄 Reset]        │
+├──────────────────────────────────────────┤
+│  🎯 Daily Goal: 2 Hours                  │
+│  ████████████░░░░░░ 60% Complete         │
+├──────────────────────────────────────────┤
+│  📋 Saved Sessions:                      │
+│  💻 45 mins - Today 2:30 PM              │
+│  💻 2 hours - Yesterday 5:00 PM          │
+└──────────────────────────────────────────┘
 
-## Expanding the ESLint configuration
+💡 Simple Words:
+DevMetrics = A Fitness Tracker for Coding
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Just like a fitness app counts your steps, DevMetrics counts your coding time.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+🎯 Target Audience:
+Who	            Why
+Students	      Track how much you code daily
+Developers	    Set goals and stay productive
+Freelancers	    Track time for client work
